@@ -8,3 +8,9 @@ TEST(DimensionTest, OperationEQUALTO){
   EXPECT_FALSE(matr::Dimension(1,2) == matr::Dimension(1,1));
   EXPECT_FALSE(matr::Dimension(7,7) == matr::Dimension(6,7));
 }
+
+TEST(DimensionTest, TestResize){
+  matr::Dimension dim = matr::Dimension(7,3);
+  dim.resize(3,2);
+  EXPECT_EQ(dim, matr::Dimension(3,2));
+}

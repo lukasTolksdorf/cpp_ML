@@ -23,4 +23,5 @@ script:
   # Check versions of gcc, g++ and cmake
   - gcc -v && g++ -v && cmake --version
   # Run your build commands next
-  - mkdir build && cd build && cmake .. && make && make test
+  - mkdir build && cd build && cmake .. && make
+  - chmod +x test\matrix\testmatrix && test\matrix\testmatrix
